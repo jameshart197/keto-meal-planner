@@ -1,7 +1,7 @@
 ---
-name: 'Stretch Goals: User Story - <TITLE>'
+name: 'Stretch Goals: User Story'
 about: This is a stretch goal user story template
-title: ''
+title: 'STRETCH - User Story: <TITLE>'
 labels: ''
 assignees: ''
 
