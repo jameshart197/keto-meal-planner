@@ -28,3 +28,7 @@ class Meal(models.Model):
     protein_g = models.DecimalField(max_digits=4, decimal_places=1)
     fat_g = models.DecimalField(max_digits=4, decimal_places=1)
     carbs = models.DecimalField(max_digits=4, decimal_places=1)
+
+
+def __str__(self):
+    return self.title
