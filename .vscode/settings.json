@@ -23,5 +23,17 @@
    "files.autoSave": "off",
    "workbench.colorTheme": "Visual Studio Dark",
    "terminal.integrated.gpuAcceleration": "canvas",
-   "editor.defaultFormatter": "HookyQR.beautify"
+   "editor.defaultFormatter": "HookyQR.beautify",
+   "sqltools.connections": [
+      {
+         "previewLimit": 50,
+         "server": "lucky.db.elephantsql.com",
+         "port": 5432,
+         "driver": "PostgreSQL",
+         "name": "keto-meal-planner",
+         "username": "ecxmqspz",
+         "database": "ecxmqspz",
+         "password": "Y74Fg5B5_YmTvWKBxWMaHVYlNTUvkKxv"
+      }
+   ]
 }
