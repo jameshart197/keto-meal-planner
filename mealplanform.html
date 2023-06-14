@@ -1,0 +1,21 @@
+form method="POST" action="{% url 'meal_plan_create' %}">
+    {% csrf_token %}
+    <select name="breakfast">
+      <option value="">Select Breakfast</option>
+      {% for meal in breakfast_meals %}
+        <option value="{{ meal.id }}">{{ meal.name }}</option>
+      {% endfor %}
+    </select>
+    <select name="lunch">
+      <option value="">Select Lunch</option>
+      {% for meal in lunch_meals %}
+        <option value="{{ meal.id }}">{{ meal.name }}</option>
+      {% endfor %}
+    </select>
+    <select name="dinner">
+      <option value="">Select Dinner</option>
+      {% for meal in dinner_meals %}
+        <option value="{{ meal.id }}">{{ meal.name }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit">Save Meal Plan</button>

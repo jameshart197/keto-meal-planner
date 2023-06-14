@@ -3,9 +3,14 @@ from .models import Meal
 
 
 def meal_list(request):
-    breakfast_meals = Meal.objects.filter(meal_type=0)
-    lunch_meals = Meal.objects.filter(meal_type=1)
-    dinner_meals = Meal.objects.filter(meal_type=2)
+    if request.method == 'POST':
+        breakfast_id = request.POST.get('breakfast')
+        lunch_id = request.POST.get('lunch')
+        dinner_id = request.POST.get('dinner')
+        
+        breakfast_meals = Meal.objects.filter(meal_type=0)
+        lunch_meals = Meal.objects.filter(meal_type=1)
+        dinner_meals = Meal.objects.filter(meal_type=2)
 
     context = {
         'breakfast_meals': breakfast_meals,
