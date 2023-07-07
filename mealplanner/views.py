@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from .models import Meal
+from django.contrib import messages
 
 
 def meal_list(request):
+    messages.error(request, "ERROR")
+    """
     if request.method == 'POST':
         breakfast_id = request.POST.get('breakfast')
         lunch_id = request.POST.get('lunch')
@@ -17,4 +20,5 @@ def meal_list(request):
         'lunch_meals': lunch_meals,
         'dinner_meals': dinner_meals,
               }
-    return render(request, 'meal_list.html', context)
+    """
+    return render(request, "index.html")
