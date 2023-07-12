@@ -1,9 +1,21 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
 
-{% block content %}
-
-<h1>Meal Planner</h1>
-<!-- Hero Image -->
+<div class="hero-image">
+    <div class="row justify-content-center">
+        <div class="py-3 px-5 rounded-3 col-md-6 jumbotron">
+          <div class="container-fluid py-5 text-center">
+            <h1 class="display-5 fw-bold">Keto Meal Planner</h1>
+            <p class="col-md-12 fs-5">
+              Plan your meals from a selection of personally curated meals perfect for a
+              balanced, healthy and enjoyable Keto diet.
+            </p>
+            <hr class="my-4" />
+            <p>Sign up to get started making <em>your</em> keto meal plan today!</p>
+            <button class="btn btn-primary btn-lg" type="button">Sign Up!</button>
+          </div>
+        </div>
+    </div>
+</div>
 <!-- Get Creating Now (login) -->
 <!-- If logged in:
     Most Recent
@@ -11,6 +23,5 @@
     New Meal Plan
     View Meal Plans
 -->
-
 
 {% endblock %}

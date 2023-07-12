@@ -1,0 +1,13 @@
+.hero-image {
+    min-width: 100vh;
+    min-height: 90vh;
+    background-image: url("/static/assets/homepage-hero.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jumbotron {
+    background-color: rgba(216, 250, 218, 0.795);
+}
