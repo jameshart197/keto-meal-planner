@@ -4,7 +4,7 @@ from django.contrib import messages
 
 
 def meal_list(request):
-    messages.error(request, "ERROR")
+    # messages.error(request, "ERROR")
     """
     if request.method == 'POST':
         breakfast_id = request.POST.get('breakfast')

@@ -35,5 +35,8 @@
          "database": "ecxmqspz",
          "password": "Y74Fg5B5_YmTvWKBxWMaHVYlNTUvkKxv"
       }
-   ]
+   ],
+   "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter"
+   }
 }
