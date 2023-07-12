@@ -1,10 +1,47 @@
-from django.shortcuts import render
-from .models import Meal
+from django.shortcuts import render, redirect
+from .models import Meal, MealPlan
 from django.contrib import messages
+from .forms import MealForm
 
 
 def meal_list(request):
-    # messages.error(request, "ERROR")
+    
+    return render(request, "index.html")
+
+
+def home(request):
+    return render(request, "home.html")
+
+
+def adminpanel(request):
+    if request.method == "POST":
+        form = MealForm(data=request.POST)
+        print(form.is_valid(), form.errors())
+        if form.is_valid():
+            meal = form.save(commit=False)
+            meal.save()
+            return redirect(
+                reverse('home')
+            )
+        else:
+            form = MealForm()
+            context = {
+                "form": form
+            }
+            return render(request, "adminpanel.html", context)
+    if request.method == "GET":
+        if not request.user.is_staff:
+            return redirect(
+                reverse('home')
+            )
+        form = MealForm()
+        context = {
+            "form": form
+        }
+        return render(request, "adminpanel.html", context)
+
+
+# messages.error(request, "ERROR")
     """
     if request.method == 'POST':
         breakfast_id = request.POST.get('breakfast')
@@ -21,8 +58,3 @@ def meal_list(request):
         'dinner_meals': dinner_meals,
               }
     """
-    return render(request, "index.html")
-
-
-def home(request):
-    return render(request, "home.html")
