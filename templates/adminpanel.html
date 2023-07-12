@@ -2,23 +2,6 @@
 
 {% block content %}
 
-{% load crispy_forms_tags %}
 
-<form action="{% url 'adminpanel' %}" method="POST">
-    {% csrf_token %}
-    {{ form | crispy }}
-  
-    <button class="btn btn-success" name="submit">Add Meal</button>
-</form>
-
-<!-- <div class="hero-image">
-    <h1 class="home-header display-5 p-3 rounded-3 fw-normal">
-        Welcome to the Admin Panel
-    </h1>
-    <div class="button-container">
-        <button type="button" class="btn btn-dark btn-lg">Create Meal</button>
-        <button type="button" class="btn btn-dark btn-lg">View Meals</button>
-    </div>
-</div> -->
 
 {% endblock %}
