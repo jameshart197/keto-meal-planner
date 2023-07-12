@@ -16,3 +16,7 @@
 .navbar {
     height: 10vh;
 }
+
+.invert-color {
+    filter: invert(1);
+}
